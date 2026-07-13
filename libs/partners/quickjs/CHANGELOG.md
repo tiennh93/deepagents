@@ -2,6 +2,28 @@
 
 # Changelog
 
+## [0.4.0](https://github.com/tiennh93/deepagents/compare/langchain-quickjs==0.3.2...langchain-quickjs==0.4.0) (2026-07-13)
+
+
+### ⚠ BREAKING CHANGES
+
+* **quickjs:** upgrade to 0.2.0 quickjs-rs ([#4067](https://github.com/tiennh93/deepagents/issues/4067))
+
+### Features
+
+* **code,quickjs:** dynamic subagents UI ([#4221](https://github.com/tiennh93/deepagents/issues/4221)) ([10bcba2](https://github.com/tiennh93/deepagents/commit/10bcba25600e51aba135f170b34aa6315c0f53d6))
+* **quickjs:** prompt tuning on task global ([#4066](https://github.com/tiennh93/deepagents/issues/4066)) ([a47696f](https://github.com/tiennh93/deepagents/commit/a47696f6d3e57eccb5ea19fb344305a7995ecc76))
+* **quickjs:** upgrade to 0.2.0 quickjs-rs ([#4067](https://github.com/tiennh93/deepagents/issues/4067)) ([4ffea88](https://github.com/tiennh93/deepagents/commit/4ffea88690418207b5e4fa800ee8c1abfa454bec))
+
+
+### Bug Fixes
+
+* **quickjs:** correct `eval` await description ([#4371](https://github.com/tiennh93/deepagents/issues/4371)) ([4ab860f](https://github.com/tiennh93/deepagents/commit/4ab860f007832821bd303809d7c2c1d2c86a6528))
+* **quickjs:** ensure top-level title on subagent response schemas ([#4155](https://github.com/tiennh93/deepagents/issues/4155)) ([08f917e](https://github.com/tiennh93/deepagents/commit/08f917eea79513e7e894731f884e738c2d30383f))
+* **quickjs:** normalize nested `undefined` tool args ([#3935](https://github.com/tiennh93/deepagents/issues/3935)) ([1b461a0](https://github.com/tiennh93/deepagents/commit/1b461a0d6c6a7a6d323db18505596fcce4326b92))
+* **quickjs:** persist top-level JS declarations across evals ([#4147](https://github.com/tiennh93/deepagents/issues/4147)) ([7574fea](https://github.com/tiennh93/deepagents/commit/7574fea88b51c77f7afa8279c4f561d6ecb47e3f))
+* **quickjs:** ptc tools in tools namespace are rendered without prepended `tools.` in system prompt and task as ptc duplicated task global ([#4075](https://github.com/tiennh93/deepagents/issues/4075)) ([014a903](https://github.com/tiennh93/deepagents/commit/014a9033af70b5b8b08ad2eb36f98590f5f1cca8))
+
 ## [0.3.2](https://github.com/langchain-ai/deepagents/compare/langchain-quickjs==0.3.1...langchain-quickjs==0.3.2) (2026-06-25)
 
 ### Features
