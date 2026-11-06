@@ -2,6 +2,14 @@
 
 # Changelog
 
+## [0.0.14](https://github.com/tiennh93/deepagents/compare/deepagents-acp==0.0.13...deepagents-acp==0.0.14) (2026-11-06)
+
+
+### Bug Fixes
+
+* **acp:** preserve local context prompt across compaction ([#6840](https://github.com/tiennh93/deepagents/issues/6840)) ([b7e777f](https://github.com/tiennh93/deepagents/commit/b7e777fb55023a78c88ed055bc846f52a334ae76))
+* **acp:** scope shell permissions to exact commands ([#6881](https://github.com/tiennh93/deepagents/issues/6881)) ([2cbef82](https://github.com/tiennh93/deepagents/commit/2cbef82a0a8ed9fdc318ab23a926f6b11438da6f))
+
 ## [0.0.13](https://github.com/langchain-ai/deepagents/compare/deepagents-acp==0.0.12...deepagents-acp==0.0.13) (2026-10-12)
 
 ### Bug Fixes
