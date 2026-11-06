@@ -1,5 +1,43 @@
 # Changelog
 
+## [0.2.0](https://github.com/tiennh93/deepagents/compare/deepagents-talon==0.1.0...deepagents-talon==0.2.0) (2026-11-06)
+
+
+### ⚠ BREAKING CHANGES
+
+* **deps:** `deepagents-code` and `deepagents-talon` now require Python 3.14 (`>=3.14,<3.15`). Re-run the dcode installer, or recreate your environment on Python 3.14.
+
+### Features
+
+* **code:** add NVIDIA OpenShell sandbox provider ([#6999](https://github.com/tiennh93/deepagents/issues/6999)) ([84d4b14](https://github.com/tiennh93/deepagents/commit/84d4b146cdc3ab45e3e0b9c79c972690ad814ab1))
+* **deps:** require Python 3.14 ([#7052](https://github.com/tiennh93/deepagents/issues/7052)) ([96eca0b](https://github.com/tiennh93/deepagents/commit/96eca0b2e13db0b9e3dd9822d062ad316ba0b5fa))
+* **talon:** add `/effort` reasoning controls ([#7043](https://github.com/tiennh93/deepagents/issues/7043)) ([692c234](https://github.com/tiennh93/deepagents/commit/692c23400e813b37959a206f96e31b89460a310f))
+* **talon:** add `openshell` sandbox extra ([#7000](https://github.com/tiennh93/deepagents/issues/7000)) ([85c1311](https://github.com/tiennh93/deepagents/commit/85c1311cc2b859a231e1fe1f556564ac80c07474))
+* **talon:** add configurable interim progress verbosity ([#7037](https://github.com/tiennh93/deepagents/issues/7037)) ([4bf5022](https://github.com/tiennh93/deepagents/commit/4bf50225d9f2bd777c1b2aa722e76273eb772ab0))
+* **talon:** add independent Slack and Discord breakout tasks ([#6932](https://github.com/tiennh93/deepagents/issues/6932)) ([aed3f7f](https://github.com/tiennh93/deepagents/commit/aed3f7f1e17c6bf627fe804ad4219b24678935db))
+* **talon:** add main-agent command hooks ([#7380](https://github.com/tiennh93/deepagents/issues/7380)) ([13e3eab](https://github.com/tiennh93/deepagents/commit/13e3eab6064015e700e8c3e1c41efcc222d8d62b))
+* **talon:** answer Discord guild mentions in threads, like Slack ([#7012](https://github.com/tiennh93/deepagents/issues/7012)) ([2540af1](https://github.com/tiennh93/deepagents/commit/2540af1ecfc61452b2695bcda032db61279ce1bd))
+* **talon:** make background subagent capacity configurable ([#7048](https://github.com/tiennh93/deepagents/issues/7048)) ([3e904c8](https://github.com/tiennh93/deepagents/commit/3e904c8cffd39ddf461de2d890118383897c0c74))
+* **talon:** pin skills to scheduled jobs ([#6906](https://github.com/tiennh93/deepagents/issues/6906)) ([a2b287d](https://github.com/tiennh93/deepagents/commit/a2b287d36006f0369dc1e7a8a4374b7c3d7cb8dc))
+* **talon:** reload skills when skill files change ([#6904](https://github.com/tiennh93/deepagents/issues/6904)) ([bfd09fb](https://github.com/tiennh93/deepagents/commit/bfd09fb46e52e436fc1727d743cff915823a4093))
+* **talon:** run command hooks in local subagents ([#7381](https://github.com/tiennh93/deepagents/issues/7381)) ([f8a6a7f](https://github.com/tiennh93/deepagents/commit/f8a6a7fdd7241dea0c40fb31d30cd3c4c98f95fb))
+* **talon:** store inbound media as backend blobs ([#6905](https://github.com/tiennh93/deepagents/issues/6905)) ([a96a3b6](https://github.com/tiennh93/deepagents/commit/a96a3b63b206feef23af9237a1a64a93d1f52aef))
+* **talon:** support DeepSeek reasoning levels ([#7439](https://github.com/tiennh93/deepagents/issues/7439)) ([3a217ce](https://github.com/tiennh93/deepagents/commit/3a217cec7183b601f2b33e0144e09bb50ad44f01))
+* **talon:** support skill-scoped MCP tools ([#7280](https://github.com/tiennh93/deepagents/issues/7280)) ([2a5b748](https://github.com/tiennh93/deepagents/commit/2a5b748dcc1e76c3eb5cd1735351e230788f00d7))
+
+
+### Bug Fixes
+
+* **talon:** align progress tool guidance with verbosity ([#7041](https://github.com/tiennh93/deepagents/issues/7041)) ([0089e63](https://github.com/tiennh93/deepagents/commit/0089e635dce525055272883b53bc222f385beac1))
+* **talon:** erase hook transcripts with conversation history ([#7382](https://github.com/tiennh93/deepagents/issues/7382)) ([701c986](https://github.com/tiennh93/deepagents/commit/701c986640635807ee19b5b0adce63ea9c8f888d))
+* **talon:** expose channel documents without inlining contents ([#7049](https://github.com/tiennh93/deepagents/issues/7049)) ([fc21074](https://github.com/tiennh93/deepagents/commit/fc210741b2da06c93409100e0c92be3391db70a5))
+* **talon:** identify MCP OAuth requests with a user agent ([#6981](https://github.com/tiennh93/deepagents/issues/6981)) ([7f474e1](https://github.com/tiennh93/deepagents/commit/7f474e1527dd8b014d53ebb6aa66321a54798ced))
+* **talon:** preserve gateway provider reasoning controls ([#7047](https://github.com/tiennh93/deepagents/issues/7047)) ([1e3bbef](https://github.com/tiennh93/deepagents/commit/1e3bbef613ab916161115fe47b29463a905147b0))
+* **talon:** preserve optional MCP arguments on Responses ([#7530](https://github.com/tiennh93/deepagents/issues/7530)) ([f161e20](https://github.com/tiennh93/deepagents/commit/f161e20568619f9ff61d483ea0fdf00e63c45215))
+* **talon:** preserve other participants in Slack thread context ([#6862](https://github.com/tiennh93/deepagents/issues/6862)) ([bfd9f22](https://github.com/tiennh93/deepagents/commit/bfd9f22fc558d5e90c809cf3beccb64aa69f3556))
+* **talon:** raise dependency minimums ([#6952](https://github.com/tiennh93/deepagents/issues/6952)) ([3c1aac9](https://github.com/tiennh93/deepagents/commit/3c1aac97c96755530eefaf8b0d1d88fbf43c4566))
+* **talon:** start each cron run on a fresh thread ([#6936](https://github.com/tiennh93/deepagents/issues/6936)) ([7a27b8c](https://github.com/tiennh93/deepagents/commit/7a27b8c3c945bdae2932769a25969202800c8a37))
+
 ## [0.1.0](https://github.com/langchain-ai/deepagents/compare/deepagents-talon==0.0.9...deepagents-talon==0.1.0) (2026-10-22)
 
 ### ⚠ BREAKING CHANGES
