@@ -2,6 +2,60 @@
 
 # Deep Agents Changelog
 
+## [0.7.35](https://github.com/tiennh93/deepagents/compare/deepagents==0.7.34...deepagents==0.7.35) (2026-11-06)
+
+
+### Features
+
+* **sdk:** add `notify_parent` to `AsyncSubAgent` ([#7132](https://github.com/tiennh93/deepagents/issues/7132)) ([3ae25ff](https://github.com/tiennh93/deepagents/commit/3ae25ff85f94f15815c377e73841173a722299d6))
+* **sdk:** add `webhook` to `AsyncSubAgent` ([#7072](https://github.com/tiennh93/deepagents/issues/7072)) ([7a7c4e3](https://github.com/tiennh93/deepagents/commit/7a7c4e3708981568f96eb7fbc86aaef696c03001))
+* **sdk:** add notification metadata to async subagent notifications ([#7334](https://github.com/tiennh93/deepagents/issues/7334)) ([6b9e9c9](https://github.com/tiennh93/deepagents/commit/6b9e9c9f9088deab6d1c3f12c3c9626605d803a2))
+* **sdk:** expose `summarizer` on summarization middleware ([#6900](https://github.com/tiennh93/deepagents/issues/6900)) ([4b955e8](https://github.com/tiennh93/deepagents/commit/4b955e844f09ccb0f546644ae705e9fc3b9928b0))
+* **sdk:** expose execution output retention metadata ([#6876](https://github.com/tiennh93/deepagents/issues/6876)) ([8b8e70a](https://github.com/tiennh93/deepagents/commit/8b8e70a1c5858e44cc4b8e7c499265c90a8c5786))
+* **sdk:** nest async subagent runs under the parent's trace ([#6823](https://github.com/tiennh93/deepagents/issues/6823)) ([3cd9463](https://github.com/tiennh93/deepagents/commit/3cd94633d3fe5d434fbf492d64f6f53a3e6dcafe))
+* **sdk:** pin skills by name via `pinned_skills` ([#6810](https://github.com/tiennh93/deepagents/issues/6810)) ([7022633](https://github.com/tiennh93/deepagents/commit/70226333bac013b1b1e37acedfb7955f7e6cd6f8))
+* **sdk:** queue async subagent follow-ups without interrupting active work ([#7082](https://github.com/tiennh93/deepagents/issues/7082)) ([a7e1e25](https://github.com/tiennh93/deepagents/commit/a7e1e2575c1e96b721a0a3e0ecde6e85612ac30d))
+* **sdk:** raise on model refusals by default and report subagent refusals to the parent ([#7512](https://github.com/tiennh93/deepagents/issues/7512)) ([0fd438a](https://github.com/tiennh93/deepagents/commit/0fd438a4b952efcc13a4f599d2d7699dd6966f2d))
+* **sdk:** read inline skill tool support from model profiles ([#6879](https://github.com/tiennh93/deepagents/issues/6879)) ([f5d9c31](https://github.com/tiennh93/deepagents/commit/f5d9c31163dda54898bdb4f73a2580c9430a16d5))
+* **sdk:** record the `task` call id on subagent checkpoints ([#7509](https://github.com/tiennh93/deepagents/issues/7509)) ([213f034](https://github.com/tiennh93/deepagents/commit/213f0345fbd2dc1b09b9595028df9cc8682cc270))
+* **sdk:** report async subagents that are waiting for a human ([#6842](https://github.com/tiennh93/deepagents/issues/6842)) ([825acb3](https://github.com/tiennh93/deepagents/commit/825acb3ca03bd103e4df6013b122eca8475d1982))
+* **sdk:** support fork mode for async subagents ([#6739](https://github.com/tiennh93/deepagents/issues/6739)) ([c31c7fd](https://github.com/tiennh93/deepagents/commit/c31c7fd89d0b7cf77af292f5629cc4929d51e429))
+* **sdk:** tell async subagents which agent launched them ([#6836](https://github.com/tiennh93/deepagents/issues/6836)) ([168ac6b](https://github.com/tiennh93/deepagents/commit/168ac6b7054edec7eb4c1923059cbaec67a7f5c1))
+* **sdk:** tell the main agent about async subagent status updates ([#6853](https://github.com/tiennh93/deepagents/issues/6853)) ([9cf009b](https://github.com/tiennh93/deepagents/commit/9cf009bb21b6bf3578f94555ac4ebfbc59d4e500))
+
+
+### Bug Fixes
+
+* **sdk:** accommodate routes without trailing slash in CompositeBackend ([#7028](https://github.com/tiennh93/deepagents/issues/7028)) ([0ce837b](https://github.com/tiennh93/deepagents/commit/0ce837bf69ff0efb10c2fa100039cc0c78a74a11))
+* **sdk:** anchor summarization cutoff by message id ([#7567](https://github.com/tiennh93/deepagents/issues/7567)) ([de0bef7](https://github.com/tiennh93/deepagents/commit/de0bef7770a3e30a3a7fea2f333ef68a2e85ef28))
+* **sdk:** check filesystem permissions against the symlink-resolved path ([#6818](https://github.com/tiennh93/deepagents/issues/6818)) ([7a69743](https://github.com/tiennh93/deepagents/commit/7a6974309ac78f0b2ea636afc70bd8a0268bed7f))
+* **sdk:** clip long `grep` lines to a window around the match ([#7526](https://github.com/tiennh93/deepagents/issues/7526)) ([98ff834](https://github.com/tiennh93/deepagents/commit/98ff83427cd8dbda3fd51c1f7135217bf2544491))
+* **sdk:** drop reasoning blocks bound to history a summary replaced ([#7127](https://github.com/tiennh93/deepagents/issues/7127)) ([6032a5a](https://github.com/tiennh93/deepagents/commit/6032a5ade4908d75eb2662e602f1f61a1d7a9bcf))
+* **sdk:** enforce `LocalShellBackend` output limits in UTF-8 bytes ([#7074](https://github.com/tiennh93/deepagents/issues/7074)) ([953d5dd](https://github.com/tiennh93/deepagents/commit/953d5dda8bd866663f49dfa0659a87c3f2cf0c26))
+* **sdk:** make `ContextHubBackend.glob` honor `path` ([#6998](https://github.com/tiennh93/deepagents/issues/6998)) ([dd6706d](https://github.com/tiennh93/deepagents/commit/dd6706d3007b4a077985b38bbc0d4a792c7016bc))
+* **sdk:** omit async task IDs from user replies by default ([#7174](https://github.com/tiennh93/deepagents/issues/7174)) ([a551c88](https://github.com/tiennh93/deepagents/commit/a551c88389e390454e8363a4f1b74d41fd6b8c80))
+* **sdk:** preserve filesystem permissions in middleware overrides ([#7166](https://github.com/tiennh93/deepagents/issues/7166)) ([6ae83f4](https://github.com/tiennh93/deepagents/commit/6ae83f4bc3ac444a6555f3cdd3878c4559fe5b81))
+* **sdk:** preserve parent rubric during parallel subagent calls ([#6849](https://github.com/tiennh93/deepagents/issues/6849)) ([9740b88](https://github.com/tiennh93/deepagents/commit/9740b88c06109890447ddd005871943f251c99c5))
+* **sdk:** preserve resolved tool-result paths ([#6968](https://github.com/tiennh93/deepagents/issues/6968)) ([29d646f](https://github.com/tiennh93/deepagents/commit/29d646fd2d832a44c476964333eddecb0ec1c0cd))
+* **sdk:** promote rubric middleware out of beta ([#7368](https://github.com/tiennh93/deepagents/issues/7368)) ([98773a7](https://github.com/tiennh93/deepagents/commit/98773a73843421f85a2113e6c3b0262f53d9bcd6))
+* **sdk:** propagate subagent name to subagents ([#6987](https://github.com/tiennh93/deepagents/issues/6987)) ([610a5fb](https://github.com/tiennh93/deepagents/commit/610a5fb036120e272842684e4bbd4909c6cf7c1f))
+* **sdk:** put a subagent's own `SkillsMiddleware` in the skills slot ([#6820](https://github.com/tiennh93/deepagents/issues/6820)) ([9a91d79](https://github.com/tiennh93/deepagents/commit/9a91d79e18dacfe900ac62e59c756e87f3b586a7))
+* **sdk:** recover from context overflow in the summary call ([#6864](https://github.com/tiennh93/deepagents/issues/6864)) ([efd88ff](https://github.com/tiennh93/deepagents/commit/efd88ff8fd1279361de77a83c9f75d98ed2f36d5))
+* **sdk:** reject text edits of binary files ([#7069](https://github.com/tiennh93/deepagents/issues/7069)) ([7a70d6e](https://github.com/tiennh93/deepagents/commit/7a70d6e0e55ec818a454f071ff99295e5c12eab9))
+* **sdk:** report async subagent runs cancelled on the server, and drop reasoning from check results ([#7060](https://github.com/tiennh93/deepagents/issues/7060)) ([ac8d8e9](https://github.com/tiennh93/deepagents/commit/ac8d8e942a46bbc8e1f078fcb6b8d6393534abe2))
+* **sdk:** report failed compaction with error status ([#7538](https://github.com/tiennh93/deepagents/issues/7538)) ([2c11c92](https://github.com/tiennh93/deepagents/commit/2c11c92ee2f47e4ce62e7e6510a77b0f2ad6b638))
+* **sdk:** restrict Python grep fallback to the requested file ([#7539](https://github.com/tiennh93/deepagents/issues/7539)) ([3a0c7bb](https://github.com/tiennh93/deepagents/commit/3a0c7bb935fefb5d283f0799ef4551add6c2a361))
+* **sdk:** retry an async subagent check when its thread can't be read ([#7124](https://github.com/tiennh93/deepagents/issues/7124)) ([d57b09b](https://github.com/tiennh93/deepagents/commit/d57b09b1a7a9890fee2db649e6418416f039df14))
+* **sdk:** skip binary files in in-memory `grep` ([#7032](https://github.com/tiennh93/deepagents/issues/7032)) ([97f856d](https://github.com/tiennh93/deepagents/commit/97f856dcb08264ef78722a4687cab9133ec5fb7a))
+
+
+### Performance Improvements
+
+* **sdk:** prefer ripgrep for sandbox searches ([#6919](https://github.com/tiennh93/deepagents/issues/6919)) ([7a655f7](https://github.com/tiennh93/deepagents/commit/7a655f77382484a6e6ca27e8724b08064af670c8))
+* **sdk:** skip `.git` in sandbox `grep` and fix path-glob `grep` ([#6910](https://github.com/tiennh93/deepagents/issues/6910)) ([f8ecffa](https://github.com/tiennh93/deepagents/commit/f8ecffad6523775a323a807bc57097a98aa27e01))
+* **sdk:** stop importing `langchain_anthropic` at import time ([#7204](https://github.com/tiennh93/deepagents/issues/7204)) ([492a184](https://github.com/tiennh93/deepagents/commit/492a184c5fc07364edaae464dd0bdc4e49af3e9e))
+* **sdk:** stop importing `langchain_openai` at import time ([#7185](https://github.com/tiennh93/deepagents/issues/7185)) ([1fe9631](https://github.com/tiennh93/deepagents/commit/1fe963145de49dd62af807bff1b0e96f24c9ae07))
+
 ## [0.7.34](https://github.com/langchain-ai/deepagents/compare/deepagents==0.7.33...deepagents==0.7.34) (2026-11-05)
 
 ### Bug Fixes
